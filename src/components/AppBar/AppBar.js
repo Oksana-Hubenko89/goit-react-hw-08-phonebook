@@ -14,7 +14,7 @@ const AppBar = ({ isAuthenticated }) => (
     < CSSTransition classNames={stylesPageHeading}  in={true} appear  timeout={500} unmountOnExit>
           <PageHeading text="Phonebook" />
     </CSSTransition>
-  <header styles={styles.header}>
+  <header className={styles.Header}>
    
     <Navigation />
     {isAuthenticated ? <UserMenu /> : <AuthNav />}

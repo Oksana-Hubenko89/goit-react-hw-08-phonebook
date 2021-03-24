@@ -37,7 +37,7 @@ render() {
                     
                     <label className={styles.Label}>
                         Имя  
-                        <input className={styles.Input}
+                        <input 
                             type="text"
                             name="name"
                             value={name}
@@ -46,7 +46,7 @@ render() {
 
                     <label className={styles.Label}>
                         Почта  
-                        <input className={styles.Input}
+                        <input 
                             type="email"
                             name="email"
                             value={email}
@@ -54,7 +54,7 @@ render() {
                     </label>
                     <label className={styles.Label}>
                         Пароль  
-                        <input className={styles.Input}
+                        <input 
                             type="password"
                             name="password"
                             value={password}
