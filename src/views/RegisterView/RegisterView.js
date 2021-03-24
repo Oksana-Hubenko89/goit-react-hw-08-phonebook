@@ -28,7 +28,7 @@ render() {
     const { name, email, password } = this.state;
 
         return (
-            <div>
+            <div >
                 <h1 className={styles.Title}>Страница регистрации</h1>
                 <form
                     onSubmit={this.handleSubmit}
