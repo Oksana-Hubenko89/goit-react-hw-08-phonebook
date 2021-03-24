@@ -1,0 +1,14 @@
+.Container{
+    padding: 10%;
+    display: flex;
+    flex-direction:column;
+    min-height: calc(100vh - 50%);
+    align-items: center;
+    justify-content: center;
+  };
+
+  .Title{
+    font-weight: 500;
+    font-size: 48px;
+    text-align:center;
+  };

@@ -1,0 +1,12 @@
+.Container{
+    display:flex;
+    align-items:center;
+};
+
+.Avatar{
+    margin-right: 4px;
+}
+.Name{
+    font-weight: 700;
+    margin-right: 12px;
+}
