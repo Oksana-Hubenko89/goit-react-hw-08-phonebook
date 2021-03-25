@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
 import styles from './Navigation.module.css';
 
-
 const Navigation = ({ isAuthenticated }) => (
   <nav>
+    <div>
     <NavLink
       to="/" exact
        className={styles.link}
-       activeClassName={styles.activeLink}>
+       activeClassName={styles.activeLink}
+      >
       Главная
     </NavLink>
 
@@ -22,7 +23,8 @@ const Navigation = ({ isAuthenticated }) => (
         activeClassName={styles.activeLink}>
         Заметки
       </NavLink>
-    )}
+      )}
+      </div>
   </nav>
 );
 

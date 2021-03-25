@@ -30,9 +30,10 @@ render() {
         return (
             <div >
                 <h1 className={style.title}>Страница регистрации</h1>
-                <div >
-                <form className={style.form}
+                
+                <form 
                     onSubmit={this.handleSubmit}
+                    className={style.form}
                     autoComplete='off'>
                     <label className={style.label}>
                         Имя  
@@ -61,7 +62,7 @@ render() {
                     </label>
                     <button className={style.Button} type="submit" >Зарегестрироваться</button>
                     </form>
-                    </div>
+                   
             </div>
         );
     };
