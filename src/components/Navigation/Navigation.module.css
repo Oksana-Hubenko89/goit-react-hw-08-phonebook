@@ -1,0 +1,11 @@
+.Link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: #2A363B;
+  }
+
+.ActiveLink {
+    color: #E84A5F;
+}

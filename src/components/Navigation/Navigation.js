@@ -9,17 +9,18 @@ const Navigation = ({ isAuthenticated }) => (
   <nav>
     <NavLink
       to="/" exact
-      className={styles.link}
-      activeClassName={styles.activeLink}>
+      className={styles.Link}
+      activeClassName={styles.ActiveLink}>
+      
       Главная
     </NavLink>
+
     {isAuthenticated && (
       <NavLink
         to="/contacts"
         exact
-        cclassName={styles.link}
-        activeClassName={styles.activeLink}
-      >
+        className={styles.Link}
+        activeClassName={styles.ActiveLink}>
         Заметки
       </NavLink>
     )}

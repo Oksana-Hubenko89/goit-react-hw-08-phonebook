@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './RegisterView.module.css';
+import style from './RegisterView.module.css';
 import { connect } from 'react-redux';
 import { authOperations } from '../../redux/auth';
 import s from '../../components/Button/Button.module.css';
@@ -29,13 +29,12 @@ render() {
 
         return (
             <div >
-                <h1 className={styles.Title}>Страница регистрации</h1>
+                <h1 className={style.Title}>Страница регистрации</h1>
+                <div className={style.Position}>
                 <form
                     onSubmit={this.handleSubmit}
-                    className={styles.Form}
                     autoComplete='off'>
-                    
-                    <label className={styles.Label}>
+                    <label className={style.label}>
                         Имя  
                         <input 
                             type="text"
@@ -44,7 +43,7 @@ render() {
                             onChange={this.handleChange} />
                     </label>
 
-                    <label className={styles.Label}>
+                    <label className={style.label}>
                         Почта  
                         <input 
                             type="email"
@@ -52,7 +51,7 @@ render() {
                             value={email}
                             onChange={this.handleChange} />
                     </label>
-                    <label className={styles.Label}>
+                    <label className={style.label}>
                         Пароль  
                         <input 
                             type="password"
@@ -62,6 +61,7 @@ render() {
                     </label>
                     <button className={s.Button} type="submit" >Зарегестрироваться</button>
                     </form>
+                    </div>
             </div>
         );
     };

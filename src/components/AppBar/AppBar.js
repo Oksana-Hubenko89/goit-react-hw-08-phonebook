@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styles from './AppBar.module.css';
+import stl from './AppBar.module.css';
 import Navigation from '../Navigation';
 import UserMenu from '../UserMenu';
 import AuthNav from '../AuthNav'
@@ -11,15 +11,18 @@ import { CSSTransition } from "react-transition-group";
 
 const AppBar = ({ isAuthenticated }) => (
   <div>
+    <div>
     < CSSTransition classNames={stylesPageHeading}  in={true} appear  timeout={500} unmountOnExit>
           <PageHeading text="Phonebook" />
-    </CSSTransition>
-  <header className={styles.Header}>
+      </CSSTransition>
+    </div>
+    <div>
+  <header className={stl.Top}>
    
     <Navigation />
     {isAuthenticated ? <UserMenu /> : <AuthNav />}
   </header>
-  
+    </div>
     </div>
 );
 

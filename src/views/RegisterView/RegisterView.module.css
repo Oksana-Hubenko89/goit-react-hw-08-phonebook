@@ -1,11 +1,11 @@
-.Form{
+.Position{
     margin-left: auto;
     margin-right: auto;
     width: 320px;
     
 }
 
-.Label{
+.label{
     display:flex;
     flex-direction:column;
     margin-bottom: 15px;
