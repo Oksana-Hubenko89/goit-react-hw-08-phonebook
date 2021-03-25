@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import stl from './AppBar.module.css';
+import styles from './AppBar.module.css';
 import Navigation from '../Navigation';
 import UserMenu from '../UserMenu';
 import AuthNav from '../AuthNav'
@@ -17,12 +17,12 @@ const AppBar = ({ isAuthenticated }) => (
       </CSSTransition>
     </div>
     <div>
-  <header className={stl.Top}>
+  <header className={styles.header}>
    
     <Navigation />
     {isAuthenticated ? <UserMenu /> : <AuthNav />}
   </header>
-    </div>
+  </div>
     </div>
 );
 

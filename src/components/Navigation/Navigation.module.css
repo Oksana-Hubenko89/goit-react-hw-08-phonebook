@@ -1,4 +1,4 @@
-.Link {
+.link {
     display: inline-block;
     text-decoration: none;
     padding: 12px;
@@ -6,6 +6,6 @@
     color: #2A363B;
   }
 
-.ActiveLink {
+.activeLink {
     color: #E84A5F;
-}
+  }

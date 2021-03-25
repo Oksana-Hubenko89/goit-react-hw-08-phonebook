@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import style from './RegisterView.module.css';
 import { connect } from 'react-redux';
 import { authOperations } from '../../redux/auth';
-import s from '../../components/Button/Button.module.css';
+//import s from '../../components/Button/Button.module.css';
 
 class RegisterView extends Component {
 
@@ -29,9 +29,9 @@ render() {
 
         return (
             <div >
-                <h1 className={style.Title}>Страница регистрации</h1>
-                <div className={style.Position}>
-                <form
+                <h1 className={style.title}>Страница регистрации</h1>
+                <div >
+                <form className={style.form}
                     onSubmit={this.handleSubmit}
                     autoComplete='off'>
                     <label className={style.label}>
@@ -59,7 +59,7 @@ render() {
                             value={password}
                             onChange={this.handleChange} />
                     </label>
-                    <button className={s.Button} type="submit" >Зарегестрироваться</button>
+                    <button className={style.Button} type="submit" >Зарегестрироваться</button>
                     </form>
                     </div>
             </div>
