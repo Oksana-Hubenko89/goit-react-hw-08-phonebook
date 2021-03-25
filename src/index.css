@@ -27,3 +27,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+a{
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: #2A363B;
+  
+}
+form{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+   
+}

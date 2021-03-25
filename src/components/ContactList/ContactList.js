@@ -22,7 +22,7 @@ const ContactList = ({ contacts, onDelete}) =>(
            
             </TransitionGroup>
           
-             
+          
   </Container>);
  
 const mapStateToProps = (state) => ({

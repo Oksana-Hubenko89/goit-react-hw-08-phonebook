@@ -30,20 +30,22 @@ render() {
         return (
             <div >
                 <h1 className={style.title}>Страница регистрации</h1>
-                
-                <form 
+                <div >
+                <form className={style.form}
                     onSubmit={this.handleSubmit}
-                    className={style.form}
-                    autoComplete='off'>
-                    <label className={style.label}>
+                    
+                        autoComplete='off'>
+                        <div >
+                    <label  className={style.label}>
                         Имя  
-                        <input 
+                        <input
                             type="text"
                             name="name"
                             value={name}
                             onChange={this.handleChange} />
                     </label>
-
+                        </div>
+                        <div >
                     <label className={style.label}>
                         Почта  
                         <input 
@@ -51,7 +53,9 @@ render() {
                             name="email"
                             value={email}
                             onChange={this.handleChange} />
-                    </label>
+                            </label>
+                        </div>
+                        <div >
                     <label className={style.label}>
                         Пароль  
                         <input 
@@ -59,10 +63,13 @@ render() {
                             name="password"
                             value={password}
                             onChange={this.handleChange} />
-                    </label>
+                            </label>
+                        </div>
+                        <div >
                     <button className={style.Button} type="submit" >Зарегестрироваться</button>
+                    </div>
                     </form>
-                   
+                   </div>
             </div>
         );
     };

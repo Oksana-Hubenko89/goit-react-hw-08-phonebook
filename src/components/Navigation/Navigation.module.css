@@ -1,5 +1,5 @@
 .link {
-    display: inline-block;
+    display: block;
     text-decoration: none;
     padding: 12px;
     font-weight: 700;
@@ -7,5 +7,6 @@
   }
 
 .activeLink {
-    color: #E84A5F;
+  text-decoration: none;
+  color: #E84A5F;
   }

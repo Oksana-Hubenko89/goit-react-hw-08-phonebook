@@ -36,7 +36,7 @@ class ContactsView extends Component {
     const { message} = this.state;
     const { contacts } = this.props;
     return (
-          <div className={b.Form} >
+          <form className={b.Form} >
           <ContactForm onSubmitContact={()=>{this.handleSubmit(message)}} onResetError={()=>{this.resetError()}}/>
           <h2 classNames={s.Contact}>Contacts</h2>
           <CSSTransition classNames={StyleFilter} in={contacts >1}
@@ -45,7 +45,7 @@ class ContactsView extends Component {
         </CSSTransition>
         {this.props.isloadingContacts && <h1>Загружаем...</h1>}
           <ContactList /> 
-          </div>  
+          </form>  
     ) 
   }
 }

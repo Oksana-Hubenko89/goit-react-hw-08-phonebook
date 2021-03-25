@@ -18,8 +18,9 @@ const AppBar = ({ isAuthenticated }) => (
     </div>
     <div>
   <header className={styles.header}>
-   
-    <Navigation/>
+   <div>
+          <Navigation />
+  </div>
     {isAuthenticated ? <UserMenu /> : <AuthNav />}
   </header>
   </div>

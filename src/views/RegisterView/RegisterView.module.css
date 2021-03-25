@@ -1,15 +1,19 @@
 .form{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-items: center;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+   
 }
 
 .label{
-    display:flex;
+    display: flex;
     flex-direction:column;
+    align-items:stretch;    
     margin-bottom: 15px;
-    width: 320px;
+    
+    
+    
     
 }
 
@@ -20,7 +24,9 @@
 
 .Button{
   position: relative;
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 70%;
   font-weight: 700;
   color: #fff;
