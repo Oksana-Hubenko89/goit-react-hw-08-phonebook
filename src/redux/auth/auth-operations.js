@@ -24,10 +24,10 @@ const register = credentials => async dispatch => {
     token.set(response.data.token);
     dispatch(authActions.registerSuccess(response.data));
   } catch (error) {
-    const { statusText, status, data } = error.response;
-    const errorMsg = `${status} ${statusText} :${data.message}`;
-    dispatch(authActions.registerError(error.message));
-    return toast.error(errorMsg);
+    // const { statusText, status, data } = error.response;
+    // const errorMsg = `${status} ${statusText} :${data.message}`;
+     dispatch(authActions.registerError(error.message));
+    return toast.error('Ошибка! Введит больше 3-х символов Имя/Почта и больше 8 символов Пароль или Контакт существует!');
   }
 };
 
@@ -41,10 +41,10 @@ const logIn = credentials => async dispatch => {
     dispatch(authActions.loginSuccess(data));
   } catch (error) {
    
-    const { statusText, status, data } = error.response;
-    const errorMsg = `${status} ${statusText} :${data.message}`;
+    // const { statusText, status, data } = error.response;
+    // const errorMsg = `${status} ${statusText} :${data.message}`;
     dispatch(authActions.loginError(error.message));
-    return toast.error(errorMsg);
+    return toast.error("Не верный логин та/или пароль!");
   }
   }
 

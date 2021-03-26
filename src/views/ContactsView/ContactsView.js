@@ -7,7 +7,8 @@ import Filter from '../../components/Filter ';
 import StyleFilter from '../../components/Filter /Filter.module.css';
 import { connect } from "react-redux";
 import { contactsOperations, contactsSelectors } from '../../redux/contacts';
-import b from '../../components/ContactForm/ContactForm.module.css';
+// import b from './ContactsView.module.css';
+
 class ContactsView extends Component {
 
   static defaultProps = {
@@ -36,22 +37,23 @@ class ContactsView extends Component {
     const { message} = this.state;
     const { contacts } = this.props;
     return (
-          <form className={b.Form} >
+          <>
           <ContactForm onSubmitContact={()=>{this.handleSubmit(message)}} onResetError={()=>{this.resetError()}}/>
-          <h2 classNames={s.Contact}>Contacts</h2>
+          <form><h2 classNames={s.Title}>Contacts</h2>
           <CSSTransition classNames={StyleFilter} in={contacts >1}
             timeout={250} unmountOnExit > 
           <Filter /> 
-        </CSSTransition>
-        {this.props.isloadingContacts && <h1>Загружаем...</h1>}
+          </CSSTransition>
+          </form>
+        {this.props.isloadingContacts && <p>Загружаем...</p>}
           <ContactList /> 
-          </form>  
+          </>  
     ) 
   }
 }
 const mapStateToProps = (state) => ({
   contacts:contactsSelectors.getTotalContactCount(state) ,
-  isloadingContacts:contactsSelectors.getLoading(state),
+  isloadingContacts:contactsSelectors.getLoadingContact(state),
  
 });
 const mapDispatchToProps = dispatch => ({

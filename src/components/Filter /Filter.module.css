@@ -19,4 +19,9 @@
     transform: scale(0.1);
     transition: all 250ms linear;
 }
- 
+ .contact{
+     padding: .3em .7em;
+     text-shadow:  #053852 -1px -1px;
+     display:flex;
+     margin: 10px;
+ }

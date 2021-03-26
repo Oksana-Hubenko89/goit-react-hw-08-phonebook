@@ -9,7 +9,7 @@ import {contactsSelectors, contactsOperations} from '../../redux/contacts/';
 const ContactList = ({ contacts, onDelete}) =>(
     
     <Container>
-   
+   <form>
                   <TransitionGroup component="ul" className={s.List} >
               
             {contacts.map(({ id, name, number }) =>
@@ -21,8 +21,8 @@ const ContactList = ({ contacts, onDelete}) =>(
             )}           
            
             </TransitionGroup>
-          
-          
+         
+       </form>   
   </Container>);
  
 const mapStateToProps = (state) => ({

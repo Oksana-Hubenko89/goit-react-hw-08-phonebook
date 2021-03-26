@@ -2,15 +2,16 @@ import React from 'react';
 import Container from "../Container";
 import { connect } from "react-redux";
 import s from "../ContactForm/ContactForm.module.css";
-import q from '../ContactList/ContactList.module.css';
 import { contactsSelectors,contactsActions } from '../../redux/contacts';
 
 const Filter = ({ value, onChange }) =>
-<Container>
-    <label styles={q.contact}>
+    <Container>
+        <form>
+    <label styles={s.contact}>
         Find contacts by name <br/>
         <input styles={s.Input} value={value} type="text" placeholder='Name or Surname' onChange={onChange} />
-    </label> 
+            </label>
+            </form>
 </Container>;
 
 const mapStateToProps = state => ({

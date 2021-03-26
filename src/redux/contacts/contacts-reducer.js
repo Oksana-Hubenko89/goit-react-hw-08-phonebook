@@ -26,7 +26,7 @@ const filter=createReducer('', {
     (_,{payload})=>payload,
 });
  
-const loading = createReducer(false, {
+const loadingContact = createReducer(false, {
     [addContactRequest]: () => true,
     [addContactSuccess]: () => false,
     [addContactError]: () => false,
@@ -43,7 +43,7 @@ const error = createReducer(null, {});
 export default combineReducers ({
     items,
     filter,
-    loading,
+    loadingContact,
     error
 });
 

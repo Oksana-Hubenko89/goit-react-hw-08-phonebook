@@ -1,6 +1,7 @@
 import {contactsReducer} from './contacts';
 import { configureStore, getDefaultMiddleware} from '@reduxjs/toolkit';
 //import logger from 'redux-logger';
+import {createReducer} from '@reduxjs/toolkit';
 import {
         persistStore,
         persistReducer,
@@ -40,12 +41,12 @@ const store = configureStore({
     reducer: {
         auth: persistReducer(authPersistConfig, authReducer) ,
         contacts: contactsReducer,
+        error:createReducer(null, {}),
         },
     middleware,
     devTools: process.env.NODE_ENV === 'development',
 });
 
 const persistor = persistStore(store);
-// const store = createStore(rootReducer, composeWithDevTools());
 
 export default {store, persistor};

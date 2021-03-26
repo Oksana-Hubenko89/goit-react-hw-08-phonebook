@@ -43,10 +43,10 @@ const addContact = (name, number) => async dispatch => {
         const { data } = await axios.post('/contacts', contact);
         dispatch(addContactSuccess(data));
     } catch (error) {
-        const { statusText, status, data } = error.response;
-        const errorMsg = `${status} ${statusText} :${data.message}`;
+        // const { statusText, status, data } = error.response;
+        // const errorMsg = `${status} ${statusText} :${data.message}`;
         dispatch(addContactError(error.message));
-         return toast.error(errorMsg);
+        //  return toast.error(errorMsg);
     }
    
 };
@@ -59,10 +59,10 @@ const deleteContact = contactId => async dispatch => {
     await axios.delete(`/contacts/${contactId}`);
     dispatch(deleteContactSuccess(contactId));
  } catch (error) {
-     const { statusText, status, data } = error.response;
-    const errorMsg = `${status} ${statusText} :${data.message}`;
+    //  const { statusText, status, data } = error.response;
+    // const errorMsg = `${status} ${statusText} :${data.message}`;
     dispatch(deleteContactError(error.message));
-    return toast.error(errorMsg)
+    // return toast.error(errorMsg)
     }
 
   
